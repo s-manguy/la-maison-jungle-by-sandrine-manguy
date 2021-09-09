@@ -15,12 +15,23 @@
 	text-transform: capitalize;
 }
 
+.lmj-plant-item-price {
+	position: absolute;
+	border-radius: 20px 20px 20px 0;
+	background-color: #31b472;
+	color: white;
+	padding: 15px;
+	right: 0;
+	top: 0;
+	font-weight: 500;
+}
 .lmj-sales {
 	position: absolute;
-	right: 0px;
+	left: 0px;
 	top: 10px;
 	font-weight: 500;
 	color: white;
 	padding: 5px 10px;
 	background-color: #31b572;
-}
+} 
+/* modified to put on the opposite corner */
