@@ -21,7 +21,8 @@ const Footer = () => {
 				Pour les passionné·e·s de plantes 🌿🌱🌵
 			</div>
             <label htmlFor='email' className='lmj-footer-elem'>
-                Laissez-nous votre adresse mail :  
+                Laissez-nous votre adresse mail : 
+                {/* changed from div (from the original code) to label for accessibility reasons */} 
                 <input 
                     type='email'
                     id='email'
@@ -31,7 +32,7 @@ const Footer = () => {
                     onChange={handleInput}
                     value={inputValue}
                     onBlur={handleBlur}
-                />
+                />  {/* added type id placeholder size required attributes for accessibility reasons */} 
             </label>
 		</footer>
 	)

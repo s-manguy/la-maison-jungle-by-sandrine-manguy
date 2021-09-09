@@ -1,35 +1,19 @@
-/*
-import '../styles/Cart.css'
-
-const Cart = () => {
-    const monsteraPrice = 8;
-    const lierrePrice = 10;
-    const fleursPrice = 15;
-    return (
-        <div className='lmj-cart'>
-            <h2>Panier</h2>
-            <ul>
-                <li>Monsterra : {monsteraPrice}€</li>
-                <li>lierre : {lierrePrice}€</li>
-                <li>Monsterra : {fleursPrice}€</li>
-            </ul>
-             Total : { monsteraPrice + lierrePrice + fleursPrice }€
-        </div>
-    )
-}
-
-export default Cart
-*/
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import '../styles/Cart.css'
 
 const Cart = ({ cart, updateCart }) => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
     const total = cart.reduce(
-        (acc, plantType) => acc + plantType.amount * plantType.price,
-        0
-    )
+            (acc, plantType) => acc + plantType.amount * plantType.price,
+            0
+        )
+    useEffect(() => {
+        document.title = `LMJ: ${total}€ d'achats`
+        alert(`Montant du panier actualisé : ${total}€`)
+    }, [total]) // test : is it possible to write more than one effect in the same use effect ? YES !
+    //useEffect(() => {
+    //    alert(`Montant du panier actualisé : ${total}€`)
+    //}, [total])
 
     return isOpen ? (
         <div className='lmj-cart'>
@@ -39,15 +23,22 @@ const Cart = ({ cart, updateCart }) => {
             >
                 Fermer
             </button>
-            <h2>Panier</h2>
-            {cart.map(({ name, price, amount }, index) => (
-                <div key= {`${name}-${index}`}>
-                    {name} {price}€ * {amount}
-                </div>
-            ))}
-            
-            <h3>Total : {total}€</h3>
-            <button onClick={() => updateCart([])}>Vider le panier</button>
+            {cart.length > 0 ? (
+               <div>
+                    <h2>Panier</h2>
+                    <ul>
+                        {cart.map(({ name, price, amount }, index) => (
+                            <div key= {`${name}-${index}`}>
+                             {name} {price}€ * {amount}
+                            </div>
+                        ))} 
+                    </ul>
+                    <h3>Total : {total}€</h3>
+                    <button onClick={() => updateCart([])}>Vider le panier</button>
+               </div> 
+            ) : (
+                <div>Votre panier est vide</div>
+            )}
         </div>
     ) : (
         <div className='lmj-cart-closed'>
@@ -58,7 +49,6 @@ const Cart = ({ cart, updateCart }) => {
                  Ouvrir le panier
             </button>
         </div>
- 
     )
 }
 
