@@ -27,12 +27,13 @@
 	justify-content: space-between;
 	margin-left: -40px;
 	padding: 0.3rem;
+	font-size: 1.1rem;
+	font-weight: 700;
 }
 
 /*.lmj-cart-item:hover {
 	background-color: #e26505 ;
-}
-*/
+}*/
 
 .lmj-cart-item-button {
 	margin-left: 5px;
@@ -42,6 +43,10 @@
 .lmj-cart-item-button:hover {
 	color:#c43c00;	
 	/*transform: scale(125%);*/
+}
+
+.lmj-cart-item-button-add:hover {
+	color: #e26505 ;
 }
 
 .lmj-cart-remove-button {

@@ -15,10 +15,13 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
 
     const removeItem = (name) => {
         const cartFilteredCPlantToDelete = cart.filter((plant) => plant.name !== name)
-        updateCart([
-            ...cartFilteredCPlantToDelete,
-        ])
-        alert(`L'article ${name} a bien été retiré.`)
+        if (window.confirm('Êtes-vous sûr de vouloir supprimer définitivement cet article ?')) {
+            updateCart([
+                ...cartFilteredCPlantToDelete,
+            ])
+            alert(`L'article ${name} a bien été retiré.`)
+        }
+       
     }
 
     const deleteOneUnit = (name, price) => {
@@ -36,7 +39,7 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
         }  
     }
 
-    const addOne = (name, price) => {
+    const addOneUnit = (name, price) => {
         const currentPlantQuantity = cart.find((plant) => plant.name === name) ;// keep the actual plant info
         const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name)
         if (currentPlantQuantity.amount >= 1) {
@@ -49,17 +52,6 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
             console.log("Error: the item is not in the cart")
         }  
     }
-
-    const addOneUnit = (name, price) => {
-        const currentPlantAdded = cart.find((plant) => plant.name === name); // keep the actual plant info
-        const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name)
-            updateCart([
-                ...cartFilteredCurrentPlant,
-                {name, price, amount: currentPlantAdded.amount - 1} 
-            ])
-    }
-
-   
 
     return isOpen ? (
         <div className='lmj-cart'>
@@ -83,7 +75,7 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
                                     <span 
                                         className="material-icons md-light md-36 lmj-cart-item-button lmj-cart-item-button-add" 
                                         title={`Ajouter 1 ${name}`}
-                                        onClick= {() => addOne(name, price)}
+                                        onClick= {() => addOneUnit(name, price)}
                                     >
                                         add_circle
                                     </span>
@@ -109,9 +101,10 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
                     <button 
                         title="Attention vous allez supprimer tout le panier !"
                         className='lmj-cart-remove-button'
-                        onClick={() => updateCart([])}>
+                        onClick={() => {if (window.confirm('Êtes-vous sûr de vouloir vider tout le panier ?')) updateCart([])}}
+                    >
                         <span class="material-icons md-36">remove_shopping_cart</span> 
-                        {' Vider le panier'} {/* Replaced "Vide le panier" by an icon  */}
+                        {' Vider le panier'} {/* Replaced "Vider le panier" by an icon  */}
                     </button>
                </div> 
             ) : (
