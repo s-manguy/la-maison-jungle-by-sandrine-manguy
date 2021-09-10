@@ -23,7 +23,8 @@ const Footer = () => {
             <label htmlFor='email' className='lmj-footer-elem'>
                 Laissez-nous votre adresse mail : 
                 {/* changed from div (from the original code) to label for accessibility reasons */} 
-                <input 
+            </label>
+            <input 
                     className="lmj-footer-elem-input"
                     type='email'
                     id='email'
@@ -33,8 +34,8 @@ const Footer = () => {
                     onChange={handleInput}
                     value={inputValue}
                     onBlur={handleBlur}
-                />  {/* added type id placeholder size required attributes for accessibility reasons */} 
-            </label>
+            />  {/* added type id placeholder size required attributes for accessibility reasons */} 
+
 		</footer>
 	)
 }

@@ -24,7 +24,17 @@
 	border-color: #0c2e1d;
 	border-width: 0.01rem;
 	font-size: 1rem;
-	
+}
+
+@media screen and (max-width: 600px)  {
+	.lmj-categories-select {
+		display: block;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1rem;
+		font-size: 1.4rem;
+		padding: 0.5rem;
+	}
 }
 
 .lmj-categories-button {
@@ -35,6 +45,16 @@
 	padding: 0.5rem;
 	color: white;
 	text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px)  {
+	.lmj-categories-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.2rem;
+		padding: 0.8rem;
+	}
 }
 
 .lmj-categories-button:hover {

@@ -17,7 +17,7 @@ const Categories = ({ categories, activeCategory, setActiveCategory }) => {
                 <select 
                     name="categories" 
                     id="categories-selector"
-                    className='lmj-categories-select's
+                    className='lmj-categories-select'
                     value={activeCategory}
                     onChange={(e) => setActiveCategory(e.target.value)}
                 >{/* added name */}
