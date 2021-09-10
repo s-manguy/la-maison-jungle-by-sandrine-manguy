@@ -15,7 +15,7 @@ const ShoppingList = ({ cart, updateCart, activeCategory, setActiveCategory }) =
     )
     
     // update cart controlling whether the current plant had already been added in the cart.
-    const addToCart = (name, price) => {
+const addToCart = (name, price) => {
         const currentPlantAdded = cart.find((plant) => plant.name === name)
         if (currentPlantAdded) {
             const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name)
@@ -23,8 +23,10 @@ const ShoppingList = ({ cart, updateCart, activeCategory, setActiveCategory }) =
                 ...cartFilteredCurrentPlant,
                 { name, price, amount: currentPlantAdded.amount + 1 } // modified amount: currentPlantAdded + 1 from the original code which didn't run
             ])
+            alert(`L'article ${name} a bien été ajouté.`)
         } else {
             updateCart([...cart, { name, price, amount: 1}])
+            alert(`L'article ${name} a bien été ajouté.`)
         }
     }
 
@@ -38,7 +40,7 @@ const ShoppingList = ({ cart, updateCart, activeCategory, setActiveCategory }) =
             <ul className='lmj-plant-list'>
                 {plantList.map(({ id, cover, name, water, light, isBestSale, isSpecialOffer, price, category }) => 
                     !activeCategory || activeCategory === category ? (
-                         <div key={id}>
+                         <li key={id}> {/* replaced div by li for accessibility reasons*/}
                             <PlantItem 
                                 cover={cover}
                                 name={name}
@@ -50,14 +52,13 @@ const ShoppingList = ({ cart, updateCart, activeCategory, setActiveCategory }) =
                             /> {/* added isBestSale & isSpecialOffer to keep the information */}
                             <button 
                                 className='lmj-cart-add-button' 
-                                title={`Ajouter 1 ${name} au panier`}
+                                aria-label={`Ajouter 1 ${name} au panier`}
                                 onClick={() => addToCart(name, price)}
                             >
-                                <span className="material-icons md-light md-24">add_shopping_cart</span>{/* Added Google icon */} 
-                                Ajouter
+                                <span className="material-icons md-light md-24">{/*add_*/}shopping_cart</span>{/* Added Google icon */} 
+                                {/* Ajouter */}
                             </button>
-   
-                        </div>  
+                        </li>  
                     ) : null
                  )}     
             </ul>

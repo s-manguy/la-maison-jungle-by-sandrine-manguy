@@ -5,7 +5,6 @@ const handleClick = (plantName) => {
     alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix !`)
 }
 
-
 const PlantItem = ({ cover, name, water, light, id, isBestSale, isSpecialOffer, price }) => {
     // id, isBestSale & isSpecialOffer props added to keep the key attribute and the offers to complete the original course project
     return (

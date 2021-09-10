@@ -18,9 +18,13 @@
 	margin-right: 15px;
 	padding: 0.35rem 0rem;
 	background-color: #2ead6e;
-	border: none;
-	font-size: 1rem;
 	color: white;
+	border: none;
+	/*color: #0c2e1d;*/
+	border-color: #0c2e1d;
+	border-width: 0.01rem;
+	font-size: 1rem;
+	
 }
 
 .lmj-categories-button {
@@ -28,7 +32,7 @@
 	border: none;
 	border-radius: 5px;
 	font-size: 0.9rem;
-	padding: 0.4rem;
+	padding: 0.5rem;
 	color: white;
 	text-transform: uppercase;
 }
