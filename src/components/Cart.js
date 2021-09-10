@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import '../styles/Cart.css'
 
-const Cart = ({ cart, updateCart, activeCategory, setActiveCategory }) => {
+const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
     // activeCategory & setActiveCategory have been put in this component in order to have the possibility to display an alert each time the category is changed
     const [isOpen, setIsOpen] = useState(true)
     const total = cart.reduce(
@@ -10,12 +10,54 @@ const Cart = ({ cart, updateCart, activeCategory, setActiveCategory }) => {
         )
     useEffect(() => {
         document.title = `LMJ: ${total}€ d'achats`
-       // alert(`Montant du panier actualisé : ${total}€`) // this line have been commented because it is not a great UX !
-    }, [total, activeCategory, setActiveCategory]) // test : is it possible to write more than one effect in the same use effect ? YES !
-    //useEffect(() => {
-    //    alert(`Montant du panier actualisé : ${total}€`)
-    //}, [total])
+       //alert(`Montant du panier actualisé : ${total}€`) // this line have been commented because it is not a great UX !
+   }, [total/* , activeCategory, setActiveCategory */]) // test : is it possible to write more than one effect in the same use effect ? YES !
 
+    const removeItem = (name) => {
+        const cartFilteredCPlantToDelete = cart.filter((plant) => plant.name !== name)
+        updateCart([
+            ...cartFilteredCPlantToDelete,
+        ])
+        alert(`L'article ${name} a bien été retiré.`)
+    }
+
+    const deleteOneUnit = (name, price) => {
+        const currentPlantQuantity = cart.find((plant) => plant.name === name) ;// keep the actual plant info
+        const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name)
+        if (currentPlantQuantity.amount > 1) {
+            updateCart([
+                ...cartFilteredCurrentPlant,
+                {name, price, amount: currentPlantQuantity.amount - 1}
+            ])
+            alert(`1 exemplaire de l'article ${name} a bien été retiré.`)
+        } else {
+            updateCart([...cartFilteredCurrentPlant])
+            alert(`1 exemplaire de l'article ${name} a bien été retiré.`)
+        }  
+    }
+
+    const addOne = (name, price) => {
+        const currentPlantQuantity = cart.find((plant) => plant.name === name) ;// keep the actual plant info
+        const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name)
+        if (currentPlantQuantity.amount >= 1) {
+            updateCart([
+                ...cartFilteredCurrentPlant,
+                {name, price, amount: currentPlantQuantity.amount + 1}
+            ])
+            alert(`L'article ${name} a bien été ajouté.`)
+        } else {
+            console.log("Error: the item is not in the cart")
+        }  
+    }
+
+    const addOneUnit = (name, price) => {
+        const currentPlantAdded = cart.find((plant) => plant.name === name); // keep the actual plant info
+        const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name)
+            updateCart([
+                ...cartFilteredCurrentPlant,
+                {name, price, amount: currentPlantAdded.amount - 1} 
+            ])
+    }
 
    
 
@@ -32,10 +74,35 @@ const Cart = ({ cart, updateCart, activeCategory, setActiveCategory }) => {
                     <h2>Panier</h2>
                     <ul>
                         {cart.map(({ name, price, amount }, index) => (
-                            <div key= {`${name}-${index}`}>
-                             {name} {price}€ * {amount}
-                            </div>
-
+                            <li 
+                                key= {`${name}-${index}`}
+                                className="lmj-cart-item"
+                            >
+                                {name} {price}€ * {amount} 
+                                <div>
+                                    <span 
+                                        className="material-icons md-light md-36 lmj-cart-item-button lmj-cart-item-button-add" 
+                                        title={`Ajouter 1 ${name}`}
+                                        onClick= {() => addOne(name, price)}
+                                    >
+                                        add_circle
+                                    </span>
+                                    <span 
+                                        className="material-icons md-light md-36 lmj-cart-item-button"
+                                        title={`Enlever 1 ${name}`}
+                                        onClick={() => deleteOneUnit(name, price)}
+                                    >
+                                        remove_circle
+                                    </span> 
+                                    <span 
+                                        className="material-icons  md-light md-36 lmj-cart-item-button"
+                                        title={`Supprimer l'article ${name}`}
+                                        onClick={() => removeItem(name, price)}
+                                    >
+                                        delete_forever
+                                    </span> 
+                                </div> 
+                            </li>
                         ))} 
                     </ul>
                     <h3>Total : {total}€</h3>
