@@ -11,6 +11,33 @@
 }
 
 .lmj-cart-add-button {
-	margin-left: 32px;
+	padding: 0.5rem;
+	border: none;
+	border-radius: 5px;
+	margin: -0.5rem 1rem 1rem 1rem;
 	cursor: pointer;
+	background-color: #e26505; 
+	box-shadow: none;
+	color: white;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	transition-property: background-color, box-shadow;
+	transition-duration: 400ms;
+	transition-timing-function: ease-in-out;
+}
+
+.lmj-cart-add-button:hover {
+	background-color: #2ead62; 
+	color: white;
+	/*font-size: 1rem;*/
+	text-transform: uppercase;
+	box-shadow: grey 0.2rem 0.2rem 0.2rem;
+}
+
+.lmj-cart-add-button:focus {
+	background-color: #1e7047; 
+	color: white;
+	/*font-size: 1rem;*/
+	text-transform: uppercase;
+	box-shadow: grey 0.2rem 0.2rem 0.2rem;
 }

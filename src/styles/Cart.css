@@ -1,11 +1,12 @@
 .lmj-cart {
 	color: white;
-	background-color: #31b572;
+	background-color: #2ead6e;
 	padding: 32px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	width: 400px;
+	font-size: 1.2rem;
 }
 
 .lmj-cart-toggle-button {
@@ -20,11 +21,42 @@
 	align-self: flex-end;
 }
 
+.lmj-cart-remove-button {
+	color: white;
+	background-color: #2ead6e ; /* previous color: #31b572 */
+	width: auto;
+	padding: 10px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1rem;
+	border: solid 2px white;
+	border-radius: 5px;
+}
+
+.lmj-cart-remove-button:hover {
+	background-color: #c43c00 ;
+}
+
 .lmj-cart-closed {
 	padding: 32px;
-	width: 200px;
+	width: 300px;	
 }
 
 .lmj-cart-closed > button {
-	color: black;
+	color: white;
+	background-color: #31b572;
+	width: auto;
+	padding: 10px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+.lmj-cart-closed > button:hover {
+	background-color: #1E7047;
+	box-shadow: grey 0.2rem 0.2rem 0.2rem;
+}
+
+.lmj-cart-closed > button:active {
+	background-color: #e26505;
 }

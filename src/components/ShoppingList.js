@@ -1,12 +1,12 @@
-import { useState } from 'react/cjs/react.development'
 import { plantList } from '../datas/plantList'
 import PlantItem from './PlantItem'
 import Categories from './Categories'
 import '../styles/ShoppingList.css'
 
 
-const ShoppingList = ({ cart, updateCart }) => {
-    const [activeCategory, setActiveCategory] = useState('')
+const ShoppingList = ({ cart, updateCart, activeCategory, setActiveCategory }) => {
+     // activeCategory & setActiveCategory local states have been commented in this component in order to have the possibility to display an alert each time the category is changed
+    //const [activeCategory, setActiveCategory] = useState('')
     // Function to obtain a list of the various categories in order to give the possibility to select one of them
     const categories = plantList.reduce(
         (acc, plant) =>
@@ -48,8 +48,16 @@ const ShoppingList = ({ cart, updateCart }) => {
                                 isSpecialOffer={isSpecialOffer}
                                 price={price}
                             /> {/* added isBestSale & isSpecialOffer to keep the information */}
-                            <button onClick={() => addToCart(name, price)}>Ajouter</button>
-                        </div>   
+                            <button 
+                                className='lmj-cart-add-button' 
+                                title={`Ajouter 1 ${name} au panier`}
+                                onClick={() => addToCart(name, price)}
+                            >
+                                <span className="material-icons md-light md-24">add_shopping_cart</span>{/* Added Google icon */} 
+                                Ajouter
+                            </button>
+   
+                        </div>  
                     ) : null
                  )}     
             </ul>

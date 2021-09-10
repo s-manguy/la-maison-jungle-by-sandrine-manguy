@@ -18,12 +18,13 @@ const Footer = () => {
 	return (
 		<footer className='lmj-footer'>
 			<div className='lmj-footer-elem'>
-				Pour les passionné·e·s de plantes 🌿🌱🌵
+				Pour les passionné·e·s de plantes {/*🌿🌱🌵*/}
 			</div>
             <label htmlFor='email' className='lmj-footer-elem'>
                 Laissez-nous votre adresse mail : 
                 {/* changed from div (from the original code) to label for accessibility reasons */} 
                 <input 
+                    className="lmj-footer-elem-input"
                     type='email'
                     id='email'
                     placeholder='Entrez votre adresse mail'

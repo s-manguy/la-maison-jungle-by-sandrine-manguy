@@ -8,6 +8,9 @@ import '../styles/Layout.css'
 
 
 const App = () => {
+  
+  // activeCategory & setActiveCategory have been put in this component in order to have the possibility to display an alert each time the category is changed
+  const [activeCategory, setActiveCategory] = useState('')
   // keep the cart even if the page is refreshed
   const savedCart = localStorage.getItem('cart')
   const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : [])
@@ -21,10 +24,14 @@ const App = () => {
       <div className='lmj-layout-inner'>
         <Cart 
           cart={cart}
-          updateCart= {updateCart} />
+          updateCart={updateCart}
+          activeCategory={activeCategory}
+          setActiveCategory={setActiveCategory} />
         <ShoppingList 
           cart={cart}
           updateCart= {updateCart} 
+          activeCategory={activeCategory}
+          setActiveCategory={setActiveCategory}
         />
       </div>
       <Footer />
