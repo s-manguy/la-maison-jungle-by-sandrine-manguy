@@ -54,7 +54,7 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
     }
 
     return isOpen ? (
-        <div className='lmj-cart'>
+        <aside className='lmj-cart' aria-label="Panier en détails"> {/* div replaced by aside for accessibility reasons */}
             <button 
                 className='lmj-cart-toggle-button'
                 onClick={() => setIsOpen(false)}
@@ -103,24 +103,24 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
                         className='lmj-cart-remove-button'
                         onClick={() => {if (window.confirm('Êtes-vous sûr de vouloir vider tout le panier ?')) updateCart([])}}
                     >
-                        <span class="material-icons md-36">remove_shopping_cart</span> 
+                        <span className="material-icons md-36">remove_shopping_cart</span> 
                         {' Vider le panier'} {/* Replaced "Vider le panier" by an icon  */}
                     </button>
                </div> 
             ) : (
                 <div>Votre panier est vide</div>
             )}
-        </div>
+        </aside>
     ) : (
-        <div className='lmj-cart-closed'>
+        <aside className='lmj-cart-closed' aria-label="Panier fermé">
             <button 
                 className='lmj-cart-toggle-button'
                 onClick={() => setIsOpen(true)}
             >
-                 <span class="material-icons size md-48" >shopping_cart</span>
+                 <span className="material-icons size md-48" >shopping_cart</span>
                 {' Voir le panier'} {/* Replaced Ouvrir by Voir */}
             </button>
-        </div>
+        </aside>
     )
 }
 

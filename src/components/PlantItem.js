@@ -8,7 +8,7 @@ const handleClick = (plantName) => {
 const PlantItem = ({ cover, name, water, light, id, isBestSale, isSpecialOffer, price }) => {
     // id, isBestSale & isSpecialOffer props added to keep the key attribute and the offers to complete the original course project
     return (
-        <li 
+        <div
             key={id} 
             className='lmj-plant-item' 
         > 
@@ -35,7 +35,7 @@ const PlantItem = ({ cover, name, water, light, id, isBestSale, isSpecialOffer, 
             </div>
             {isSpecialOffer && <div className='lmj-sales'>Soldes</div>}{/* isSpecialOffer condition kept --> modify the css code to keep it on the plant cover */}
             {isBestSale && <div className='lmj-bestSales'>Meilleure vente</div>} {/* Added on the cover */}
-        </li>
+        </div>
     )
 }
 
