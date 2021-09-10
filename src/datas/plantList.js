@@ -97,7 +97,7 @@ export const plantList = [
 	{
 		name: 'menthe',
 		category: 'extérieur',
-		id: '6uo',
+		id: '9zv', // modified because the id was 6uo as Cactus'id
 		light: 2,
 		water: 2,
 		cover: mint,
