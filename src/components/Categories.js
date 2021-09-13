@@ -13,7 +13,7 @@ const Categories = ({ categories, activeCategory, setActiveCategory }) => {
             >
                 Sélectionnez une catégorie
             </label>
-            <div>
+            <div className='lmj-categories-choice'>
                 <select 
                     name="categories" 
                     id="categories-selector"
@@ -30,7 +30,7 @@ const Categories = ({ categories, activeCategory, setActiveCategory }) => {
                     className="lmj-categories-button"
                     onClick={() => setActiveCategory('')}
                 > 
-                    Réinitialiser
+                    Tout VOIR
                 </button>
             </div>
             

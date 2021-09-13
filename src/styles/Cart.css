@@ -1,12 +1,26 @@
 .lmj-cart {
 	color: white;
 	background-color: #2ead6e;
-	padding: 32px;
+	padding: 18px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	width: 450px;
-	font-size: 1.2rem;
+	width: 490px;
+	font-size: 1.1rem;
+}
+
+@media screen and (max-width: 600px)  {
+	.lmj-cart {
+		width: auto;
+		font-size: 1rem;
+		margin: none;
+		padding: none;
+		/* To see the cart in the place where the button is clicked ! */
+		z-index: 150;
+		position: sticky;
+		top: 0;
+		right: 0;
+	}
 }
 
 .lmj-cart-toggle-button {
@@ -15,7 +29,6 @@
 	border: none;
 	font-weight: 600;
 	cursor: pointer;
-	align-self: self-start;
 	padding: 0;
 	color: white;
 	align-self: flex-end;
@@ -25,24 +38,34 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin-left: -40px;
+	margin-left: -45px;
 	padding: 0.3rem;
-	font-size: 1.1rem;
-	font-weight: 700;
+	text-transform: uppercase;
 }
 
-/*.lmj-cart-item:hover {
-	background-color: #e26505 ;
-}*/
 
 .lmj-cart-item-button {
-	margin-left: 5px;
-	transition: color 400ms ease;
+	transition: color 600ms ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+	.lmj-cart-item {
+		font-size: 0.9rem;
+	}
+
+	.lmj-cart-item-button-box {
+		align-self: flex-end;
+	}
+	
+	.lmj-cart-item-button {
+		padding: 4px;
+
+	}
+	
 }
 
 .lmj-cart-item-button:hover {
 	color:#c43c00;	
-	/*transform: scale(125%);*/
 }
 
 .lmj-cart-item-button-add:hover {
@@ -56,9 +79,11 @@
 	padding: 10px;
 	border-radius: 5px;
 	text-transform: uppercase;
+	text-align: end;
 	font-size: 1rem;
 	border: solid 2px white;
 	border-radius: 5px;
+	align-self: flex-end;
 }
 
 .lmj-cart-remove-button:hover {
@@ -66,25 +91,59 @@
 }
 
 .lmj-cart-closed {
+	display: grid;
+	justify-content: flex-end;
 	padding: 32px;
-	width: 300px;	
+	width: 300px;
+	z-index: 100;	
+}
+
+@media screen and (max-width: 600px)  {
+	.lmj-cart-closed {
+		/*background-color: white;*/
+		padding: none;
+		padding-top: 16px;
+		position: sticky;
+		top: 0;
+		right: 0;
+	}
 }
 
 .lmj-cart-closed > button {
 	color: white;
 	background-color: #31b572;
 	width: auto;
-	padding: 10px;
+	padding: 1rem;
+	margin: 0;
+	margin-right: -16px;
 	border-radius: 5px;
 	text-transform: uppercase;
 	font-size: 1rem;
-	transition-property: background-color, box-shadow;
-	transition-duration: 400ms;
+	align-self: flex-end;
+	transform: scale(75%);
+	transition-property: background-color, box-shadow, transform;
+	transition-duration: 1000ms;
 	transition-timing-function: ease-in-out;
 }
 
+@media screen and (max-width: 600px)  {
+	.lmj-cart-closed > button {
+		background-color: #1E7047;
+		box-shadow: grey 0.2rem 0.2rem 0.2rem;
+	}
+}
+
+
 .lmj-cart-closed > button:hover {
 	background-color: #1E7047;
+	transform: translateX(10px);
+}
+
+@media screen and (max-width: 600px)  {
+	.lmj-cart-closed > button:hover {
+		background-color: #31b572;
+		transform: scale(95%);
+	}
 }
 
 .lmj-cart-closed > button:focus {
