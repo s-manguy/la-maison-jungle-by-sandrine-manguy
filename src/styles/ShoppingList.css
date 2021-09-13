@@ -1,5 +1,5 @@
 .lmj-shopping-list {
-	width: auto%;
+	width: auto;
 }
 
 .lmj-plant-list {
@@ -10,14 +10,9 @@
 	max-width: 800px;
 }
 
-@media screen and (max-width: 600px)  {
+@media screen and (max-width: 959px)  {
 	.lmj-plant-list {
-		list-style-type: none;
-		padding: 32px;
-		display: flex;
-		flex-wrap: wrap;
 		justify-content: center;
-		max-width: 800px;
 	}
 }
 
@@ -29,47 +24,32 @@
 	margin: -2rem 0rem 1rem 12.3rem; /*button icon only */
 	cursor: pointer;
 	background-color: #e26505; 
-	box-shadow: none;
+	box-shadow: grey 0.2rem 0.2rem 0.2rem;
 	color: white;
 	font-size: 0.8rem;
 	text-transform: uppercase;
-	transition-property: background-color, box-shadow;
+	transition-property: transform;
 	transition-duration: 400ms;
 	transition-timing-function: ease-in-out;
 }
 
-
 .lmj-cart-add-button:hover {
-	background-color: #2ead62; 
-	color: white;
-	/*font-size: 1rem;*/
-	text-transform: uppercase;
-	box-shadow: grey 0.2rem 0.2rem 0.2rem;
+	transform: scale(150%);
 }
 
 .lmj-cart-add-button:focus {
 	background-color: #1e7047; 
-	color: white;
-	/*font-size: 1rem;*/
-	text-transform: uppercase;
 	box-shadow: none;
 }
 
-@media screen and (max-width: 600px)  {
+@media screen and (max-width: 959px)  {
 	.lmj-cart-add-button {
 		transform: scale(150%);
 		margin-left: 11.7rem;
 		box-shadow: grey 0.2rem 0.2rem 0.2rem;
-		transition-property: transform, background-color;
-		transition-duration: 400ms;
-		transition-timing-function: ease-in-out;
 	}
 
 	.lmj-cart-add-button:hover {
-		background-color: #e26505; 
-		color: white;
-		text-transform: uppercase;
 		transform: scale(200%);
-		/*box-shadow: grey 0.2rem 0.2rem 0.2rem;*/
 	}
 }

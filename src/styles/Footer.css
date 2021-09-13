@@ -16,7 +16,7 @@
 	font-weight: 500;
 }
 
-@media screen and (max-width: 600px)  {
+@media screen and (max-width: 959px)  {
 	.lmj-footer-elem {
 		display: block;
 		justify-content: center;
@@ -28,7 +28,7 @@
 	margin-left: 5px;
 }
 
-@media screen and (max-width: 600px)  {
+@media screen and (max-width: 959px)  {
 	.lmj-footer-elem-input {
 		width: 230px;
 		min-height: 48px;

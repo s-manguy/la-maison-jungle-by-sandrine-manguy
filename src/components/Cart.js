@@ -119,7 +119,7 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
                 className='lmj-cart-toggle-button'
                 onClick={() => setIsOpen(true)}
             >
-                 <span className="material-icons size md-48" >shopping_cart</span>
+                 <span className="material-icons size md-36" >shopping_cart</span>
                 {' Voir le panier'} {/* Replaced Ouvrir by Voir */}
             </button>
         </aside>
