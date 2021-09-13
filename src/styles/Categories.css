@@ -20,21 +20,9 @@
 	background-color: #2ead6e;
 	color: white;
 	border: none;
-	/*color: #0c2e1d;*/
 	border-color: #0c2e1d;
 	border-width: 0.01rem;
 	font-size: 1rem;
-}
-
-@media screen and (max-width: 600px)  {
-	.lmj-categories-select {
-		display: block;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 1rem;
-		font-size: 1.4rem;
-		padding: 0.5rem;
-	}
 }
 
 .lmj-categories-button {
@@ -47,16 +35,6 @@
 	text-transform: uppercase;
 }
 
-@media screen and (max-width: 600px)  {
-	.lmj-categories-button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 1.2rem;
-		padding: 0.8rem;
-	}
-}
-
 .lmj-categories-button:hover {
 	background-color: #1E7047;
 	box-shadow: grey 0.2rem 0.2rem 0.2rem;
@@ -64,4 +42,29 @@
 
 .lmj-categories-button:active {
 	background-color: #e26505;
+}
+
+
+@media screen and (max-width: 600px)  {
+	.lmj-categories {
+		width: auto;
+	}
+	
+	.lmj-categories-choice {
+		display: grid;
+		justify-content: center;
+	}
+	
+	.lmj-categories-select {
+		margin-right: 0; /* cancel the desktop inline <select> margin */
+		margin-bottom: 1rem;
+		padding: 0.5rem;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	.lmj-categories-button {
+		padding: 0.8rem;
+		font-size: 1.2rem;
+	}
 }
