@@ -116,9 +116,8 @@
 	margin: 0;
 	margin-right: -16px;
 	border-radius: 5px;
-	/text-transform: uppercase;
+	text-transform: uppercase;
 	font-size: 1rem; 
-	/*transform: scale(75%);*/
 	transition-property: background-color, box-shadow, transform;
 	transition-duration: 1000ms;
 	transition-timing-function: ease-in-out;
@@ -127,7 +126,6 @@
 .lmj-cart-closed > button:hover {
 	background-color: #1E7047;
 	transform: translateX(-50px) scale(115%);
-	
 }
 
 .lmj-cart-closed > button:focus {
@@ -137,7 +135,6 @@
 
 @media screen and (max-width: 959px)  {
 	.lmj-cart-closed {
-		/* display: grid; */
 		justify-content: flex-end;
 		width: 100%;
 		z-index: 100;	
