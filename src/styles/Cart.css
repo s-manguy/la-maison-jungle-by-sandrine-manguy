@@ -6,11 +6,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	align-items: flex-start;
 	width: 360px;
 	font-size: 1.1rem;
 }
 
-@media screen and (max-width: 959px)  {
+@media screen and (max-width: 1199px)  {
 	.lmj-cart {
 		display: grid;
 		width: auto;
@@ -21,6 +22,7 @@
 	/* To see the cart in the place where the button is clicked ! */
 		z-index: 150;
 		position: sticky;
+		position: -webkit-sticky;
 		top: 1rem;
 		right: 0;
 	}
@@ -37,7 +39,7 @@
 	align-self: flex-end;
 }
 
-@media screen and (max-width: 959px)  {
+@media screen and (max-width:1199px)  {
 	.lmj-cart-toggle-button {
 		justify-self: flex-end;  /* with grid */
 	}
@@ -50,6 +52,10 @@
 	margin-left: -45px;
 	padding: 0.3rem;
 	text-transform: uppercase;
+}
+
+.lmj-cart-item-button-box {
+	margin-left: 1rem;
 }
 
 .lmj-cart-item-button {
@@ -82,7 +88,7 @@
 	background-color: #c43c00 ;
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 1200px) {
 	.lmj-cart-item {
 		font-size: 0.9rem;
 	}
@@ -104,6 +110,7 @@
 	justify-items: self-end;
 	align-self: self-start;
 	position: sticky;
+	position: -webkit-sticky;
 	top:20px;
 	left: 20px;
 }
@@ -133,16 +140,17 @@
 	box-shadow: none;
 }
 
-@media screen and (max-width: 959px)  {
+@media screen and (max-width: 1200px)  {
 	.lmj-cart-closed {
 		justify-content: flex-end;
 		width: 100%;
 		z-index: 100;	
 		margin: none;
-		margin-left: 75px;
+		margin-left: 95px;
 		padding: none;
 		padding-top: 1.6rem;
 		position: sticky;
+		position: -webkit-sticky;
 		top: 1.6rem;
 		right: 1.6rem;
 	}

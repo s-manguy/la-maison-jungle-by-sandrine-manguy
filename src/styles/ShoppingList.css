@@ -10,9 +10,10 @@
 	max-width: 800px;
 }
 
-@media screen and (max-width: 959px)  {
+@media screen and (max-width: 1199px)  {
 	.lmj-plant-list {
 		justify-content: center;
+		max-width:max-content;
 	}
 }
 
