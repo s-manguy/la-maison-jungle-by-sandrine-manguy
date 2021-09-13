@@ -52,7 +52,7 @@ const addToCart = (name, price) => {
                             /> {/* added isBestSale & isSpecialOffer to keep the information */}
                             <button 
                                 className='lmj-cart-add-button' 
-                                aria-label={`Ajouter 1 ${name} au panier`}
+                                title={`Ajouter 1 ${name} au panier`}
                                 onClick={() => addToCart(name, price)}
                             >
                                 <span className="material-icons md-light md-24">{/*add_*/}shopping_cart</span>{/* Added Google icon */} 

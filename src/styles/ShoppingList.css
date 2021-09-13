@@ -1,5 +1,5 @@
 .lmj-shopping-list {
-	width: 100%;
+	width: auto%;
 }
 
 .lmj-plant-list {
@@ -38,12 +38,6 @@
 	transition-timing-function: ease-in-out;
 }
 
-@media screen and (max-width: 600px)  {
-	.lmj-cart-add-button {
-		transform: scale(150%);
-		margin-left: 11.7rem;
-	}
-}
 
 .lmj-cart-add-button:hover {
 	background-color: #2ead62; 
@@ -59,4 +53,23 @@
 	/*font-size: 1rem;*/
 	text-transform: uppercase;
 	box-shadow: none;
+}
+
+@media screen and (max-width: 600px)  {
+	.lmj-cart-add-button {
+		transform: scale(150%);
+		margin-left: 11.7rem;
+		box-shadow: grey 0.2rem 0.2rem 0.2rem;
+		transition-property: transform, background-color;
+		transition-duration: 400ms;
+		transition-timing-function: ease-in-out;
+	}
+
+	.lmj-cart-add-button:hover {
+		background-color: #e26505; 
+		color: white;
+		text-transform: uppercase;
+		transform: scale(200%);
+		/*box-shadow: grey 0.2rem 0.2rem 0.2rem;*/
+	}
 }
