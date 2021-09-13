@@ -34,8 +34,10 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
             ])
             alert(`1 exemplaire de l'article ${name} a bien été retiré.`)
         } else {
+            if (window.confirm('Êtes-vous sûr de vouloir supprimer définitivement cet article ?')) {
             updateCart([...cartFilteredCurrentPlant])
-            alert(`1 exemplaire de l'article ${name} a bien été retiré.`)
+            alert(`L'article ${name} a bien été retiré.`)
+            }
         }  
     }
 
@@ -69,9 +71,9 @@ const Cart = ({ cart, updateCart/*}, activeCategory, setActiveCategory */}) => {
                             <li 
                                 key= {`${name}-${index}`}
                                 className="lmj-cart-item"
-                            >
-                                {name} {price}€ * {amount} 
-                                <div>
+                            >   
+                                 {name} {price}€ * {amount} 
+                                <div className='lmj-cart-item-button-box'>
                                     <span 
                                         className="material-icons md-light md-36 lmj-cart-item-button lmj-cart-item-button-add" 
                                         title={`Ajouter 1 ${name}`}
