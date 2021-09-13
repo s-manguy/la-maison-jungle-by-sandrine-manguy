@@ -110,7 +110,7 @@
 
 .lmj-cart-closed > button {
 	color: white;
-	background-color: #31b572;
+	background-color:#2ead6e;
 	width: auto;
 	padding: 1rem;
 	margin: 0;
@@ -151,14 +151,11 @@
 	}
 
 	.lmj-cart-closed > button {
-		background-color: #1E7047;
 		box-shadow: grey 0.2rem 0.2rem 0.2rem;
 		align-self: flex-end;
 	}
 
 	.lmj-cart-closed > button:hover {
-		background-color: #31b572;	
-		transform: scale(95%);
 		transform: translateX(-140px);
 	}
 }
