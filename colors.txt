@@ -1,0 +1,34 @@
+#FF6d00 + noir --> #e26505 color tool visual studio code
+#c43c00 + blanc
+#31B472 + noir --> #2ead6e color tool visual studio code
+1e7047 + blanc
+
+0c2e1d titre
+
+
+
+<span class="material-icons-outlined">
+delete_forever
+</span>
+
+delete_forever
+e92b
+
+
+<span class="material-icons-outlined">
+add_circle
+</span>
+e147
+
+
+<span class="material-icons-outlined">
+remove_circle
+</span>
+e15c
+
+htmlhelp.com/reference/html40/forms/optgroup.html
+
+
+<span class="material-icons-outlined">
+thumb_up
+</span>

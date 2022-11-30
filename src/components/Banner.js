@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <header className='lmj-banner'>{/* div replaced by header for accessibility reasons */}
                 <img src={logo} alt='La maison jungle' className='lmj-logo' />
-                <h1 className='lmj-title'>{title}</h1>
+                <h1 className='lmj-title'>{title}<br/><span className="lmj-by">by Sandrine MANGUY</span></h1>
         </header>
     )
 }

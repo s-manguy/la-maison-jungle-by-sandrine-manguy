@@ -32,3 +32,10 @@
 	height: 45px;
 	width: 45px;
 }
+
+/* added on 2022/11/09 */
+.lmj-by {
+	font-size: 1.2rem;
+	display: block;
+	margin-top: -0.2rem;
+}
