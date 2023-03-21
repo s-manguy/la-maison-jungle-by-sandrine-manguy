@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/la-maison-jungle-by-sandrine-manguy/static/css/main.9adb8b93.chunk.css",
-    "main.js": "/la-maison-jungle-by-sandrine-manguy/static/js/main.1f49edf8.chunk.js",
-    "main.js.map": "/la-maison-jungle-by-sandrine-manguy/static/js/main.1f49edf8.chunk.js.map",
-    "runtime-main.js": "/la-maison-jungle-by-sandrine-manguy/static/js/runtime-main.1e203e78.js",
-    "runtime-main.js.map": "/la-maison-jungle-by-sandrine-manguy/static/js/runtime-main.1e203e78.js.map",
-    "static/js/2.40901b08.chunk.js": "/la-maison-jungle-by-sandrine-manguy/static/js/2.40901b08.chunk.js",
-    "static/js/2.40901b08.chunk.js.map": "/la-maison-jungle-by-sandrine-manguy/static/js/2.40901b08.chunk.js.map",
-    "static/js/3.ff032e5e.chunk.js": "/la-maison-jungle-by-sandrine-manguy/static/js/3.ff032e5e.chunk.js",
-    "static/js/3.ff032e5e.chunk.js.map": "/la-maison-jungle-by-sandrine-manguy/static/js/3.ff032e5e.chunk.js.map",
+    "main.js": "/la-maison-jungle-by-sandrine-manguy/static/js/main.7dd4bd52.chunk.js",
+    "main.js.map": "/la-maison-jungle-by-sandrine-manguy/static/js/main.7dd4bd52.chunk.js.map",
+    "runtime-main.js": "/la-maison-jungle-by-sandrine-manguy/static/js/runtime-main.b022b2e5.js",
+    "runtime-main.js.map": "/la-maison-jungle-by-sandrine-manguy/static/js/runtime-main.b022b2e5.js.map",
+    "static/js/2.d50e25fb.chunk.js": "/la-maison-jungle-by-sandrine-manguy/static/js/2.d50e25fb.chunk.js",
+    "static/js/2.d50e25fb.chunk.js.map": "/la-maison-jungle-by-sandrine-manguy/static/js/2.d50e25fb.chunk.js.map",
+    "static/js/3.c6c9985c.chunk.js": "/la-maison-jungle-by-sandrine-manguy/static/js/3.c6c9985c.chunk.js",
+    "static/js/3.c6c9985c.chunk.js.map": "/la-maison-jungle-by-sandrine-manguy/static/js/3.c6c9985c.chunk.js.map",
     "index.html": "/la-maison-jungle-by-sandrine-manguy/index.html",
     "static/css/main.9adb8b93.chunk.css.map": "/la-maison-jungle-by-sandrine-manguy/static/css/main.9adb8b93.chunk.css.map",
-    "static/js/2.40901b08.chunk.js.LICENSE.txt": "/la-maison-jungle-by-sandrine-manguy/static/js/2.40901b08.chunk.js.LICENSE.txt",
+    "static/js/2.d50e25fb.chunk.js.LICENSE.txt": "/la-maison-jungle-by-sandrine-manguy/static/js/2.d50e25fb.chunk.js.LICENSE.txt",
     "static/media/basil.be00474e.jpg": "/la-maison-jungle-by-sandrine-manguy/static/media/basil.be00474e.jpg",
     "static/media/cactus.a71c2062.jpg": "/la-maison-jungle-by-sandrine-manguy/static/media/cactus.a71c2062.jpg",
     "static/media/calathea.455c33e2.jpg": "/la-maison-jungle-by-sandrine-manguy/static/media/calathea.455c33e2.jpg",
@@ -25,9 +25,9 @@
     "static/media/water.cceb486f.svg": "/la-maison-jungle-by-sandrine-manguy/static/media/water.cceb486f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1e203e78.js",
-    "static/js/2.40901b08.chunk.js",
+    "static/js/runtime-main.b022b2e5.js",
+    "static/js/2.d50e25fb.chunk.js",
     "static/css/main.9adb8b93.chunk.css",
-    "static/js/main.1f49edf8.chunk.js"
+    "static/js/main.7dd4bd52.chunk.js"
   ]
 }
